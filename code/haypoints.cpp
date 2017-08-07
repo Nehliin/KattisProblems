@@ -3,10 +3,10 @@
 
 
 inline void fastRead_int(int &x) {
-    register int c = getchar_unlocked();
+    register int c = getchar();
     x = 0;
-    for(; ((c<48 || c>57)); c = getchar_unlocked());
-    for(; c>47 && c<58 ; c = getchar_unlocked()) {
+    for(; ((c<48 || c>57)); c = getchar());
+    for(; c>47 && c<58 ; c = getchar()) {
     	x = (x<<1) + (x<<3) + c - 48;
     }
 }
@@ -16,14 +16,14 @@ inline void fastRead_word(char str[200]){
     register int i = 0;
 
     while (c < 33)
-        c = getchar_unlocked();
+        c = getchar();
 
     while (c != '\n') {
         if(c == ' '){
             break;
         }
         str[i] = c;
-        c = getchar_unlocked();
+        c = getchar();
         i++;
     }
     str[i] = '\0';
